@@ -1,0 +1,73 @@
+{
+    "name": "Acuity Scheduling",
+    "description": "Online appointment scheduling software. Clients schedule appointments, pay, and complete intake forms online 24\/7. Free signup!",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1947-acuity-scheduling.jpg",
+    "tags": [
+        "api provider",
+        "have api",
+        "marketplaces",
+        "no api definition",
+        "office",
+        "schedules",
+        "webhook implementations"
+    ],
+    "created": "2019-12-18",
+    "modified": "2019-12-18",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/acuity-scheduling\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Acuity Scheduling",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1947-acuity-scheduling.jpg",
+            "humanURL": "http:\/\/acuityscheduling.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/acuity-scheduling-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Base",
+            "url": "https:\/\/acuityscheduling.com\/api\/"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/acuity-scheduling"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "http:\/\/www.crunchbase.com\/company\/acuity-scheduling"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/acuityscheduling.com\/api-docs.php"
+        },
+        {
+            "type": "Pricing",
+            "url": "https:\/\/secure.acuityscheduling.com\/signup.php"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/acuity"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/AcuitySchedulin"
+        },
+        {
+            "type": "Webhooks",
+            "url": "https:\/\/developers.acuityscheduling.com\/docs\/webhooks"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/acuityscheduling.com\/"
+        }
+    ]
+}
