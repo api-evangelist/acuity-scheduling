@@ -1,0 +1,16 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Acuity Scheduling",
+        "description": "",
+        "termsOfService": ""
+    },
+    "servers": [
+        "https"
+    ],
+    "paths": [],
+    "components": {
+        "schemas": []
+    }
+}
