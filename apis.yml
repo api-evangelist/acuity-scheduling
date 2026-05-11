@@ -1,0 +1,59 @@
+aid: acuity-scheduling
+name: Acuity Scheduling
+description: >-
+  Acuity Scheduling is an online appointment scheduling platform (a Squarespace
+  product) used by service businesses, coaches, and practitioners to manage
+  client bookings, calendars, intake forms, payments, and reminders. The Acuity
+  REST API provides programmatic access to appointments, appointment types,
+  clients, calendars, availability, forms, and webhooks at
+  acuityscheduling.com/api/v1. Authentication uses HTTP Basic Auth (User ID +
+  API Key) for single accounts or OAuth 2.0 for multi-tenant applications.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Appointment Scheduling
+  - Booking
+  - Calendar
+  - Scheduling
+  - Squarespace
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/acuity-scheduling/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: acuity-scheduling:rest-api-v1
+    name: Acuity Scheduling REST API v1
+    description: >-
+      REST API for managing appointments, appointment types, clients,
+      calendars, availability, intake forms, products, and webhooks in Acuity
+      Scheduling. Supports HTTP Basic Auth (User ID + API Key) for single
+      accounts and OAuth 2.0 for multi-user integrations.
+    humanURL: https://developers.acuityscheduling.com/reference
+    baseURL: https://acuityscheduling.com/api/v1
+    tags:
+      - Appointment Scheduling
+      - Booking
+      - Calendar
+      - REST API
+    properties:
+      - type: Documentation
+        url: https://developers.acuityscheduling.com/reference
+      - type: Quick Start
+        url: https://developers.acuityscheduling.com/reference/quick-start
+      - type: OAuth 2.0
+        url: https://developers.acuityscheduling.com/docs/oauth2
+      - type: GitHub SDK
+        url: https://github.com/AcuityScheduling/acuity-js
+common:
+  - type: Website
+    url: https://acuityscheduling.com
+  - type: Documentation
+    url: https://developers.acuityscheduling.com
+  - type: Pricing
+    url: https://acuityscheduling.com/signup.php
+  - type: Sign Up
+    url: https://acuityscheduling.com/signup.php
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
