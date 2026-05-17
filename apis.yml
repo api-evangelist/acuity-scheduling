@@ -52,7 +52,7 @@ common:
     url: https://developers.acuityscheduling.com
   - type: Pricing
     url: https://acuityscheduling.com/signup.php
-  - type: Sign Up
+  - type: SignUp
     url: https://acuityscheduling.com/signup.php
 maintainers:
   - FN: Kin Lane
