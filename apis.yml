@@ -46,6 +46,8 @@ apis:
       - type: GitHub SDK
         url: https://github.com/AcuityScheduling/acuity-js
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/acuity-scheduling
   - type: Website
     url: https://acuityscheduling.com
   - type: Documentation
