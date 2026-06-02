@@ -19,7 +19,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/acuity-scheduling/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-11'
+modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
   - aid: acuity-scheduling:rest-api-v1
@@ -45,6 +45,29 @@ apis:
         url: https://developers.acuityscheduling.com/docs/oauth2
       - type: GitHub SDK
         url: https://github.com/AcuityScheduling/acuity-js
+  - aid: acuity-scheduling:webhooks-asyncapi
+    name: Acuity Scheduling Webhooks
+    description: >-
+      AsyncAPI 2.6 definition for Acuity Scheduling's outbound webhook surface.
+      Models the documented appointment events (scheduled, rescheduled,
+      canceled, changed) and order events (order.completed) delivered as
+      application/x-www-form-urlencoded POST requests signed with an
+      x-acuity-signature HMAC-SHA256 header.
+    humanURL: https://developers.acuityscheduling.com/reference/webhooks
+    tags:
+      - Webhooks
+      - Events
+      - AsyncAPI
+      - Appointments
+      - Orders
+    properties:
+      - type: Documentation
+        url: https://developers.acuityscheduling.com/reference/webhooks
+      - type: Documentation
+        url: https://developers.acuityscheduling.com/docs/webhooks.md
+      - type: AsyncAPI
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/acuity-scheduling/refs/heads/main/openapi/acuity-scheduling-asyncapi.yml
 common:
   - type: LinkedIn
     url: https://www.linkedin.com/company/acuity-scheduling

@@ -1,0 +1,260 @@
+asyncapi: '2.6.0'
+info:
+  title: Acuity Scheduling Webhooks
+  version: '1.0.0'
+  description: >-
+    AsyncAPI definition for Acuity Scheduling's outbound webhook surface.
+    Acuity delivers event notifications as HTTP POST requests with an
+    `application/x-www-form-urlencoded` body to integrator-supplied target URLs.
+    Each notification carries an `action` field identifying the event, an `id`
+    identifying the affected resource, and (for appointment events) `calendarID`
+    and `appointmentTypeID`. Requests include an `x-acuity-signature` header
+    containing a base64-encoded HMAC-SHA256 signature of the raw request body
+    computed with the account's API key.
+
+
+    Source documentation:
+    https://developers.acuityscheduling.com/reference/webhooks and
+    https://developers.acuityscheduling.com/docs/webhooks.md
+  contact:
+    name: Acuity Scheduling Developers
+    url: https://developers.acuityscheduling.com
+  license:
+    name: Proprietary
+defaultContentType: application/x-www-form-urlencoded
+servers:
+  integrator:
+    url: '{targetUrl}'
+    protocol: https
+    description: >-
+      Integrator-hosted HTTPS endpoint (port 443) or HTTP endpoint (port 80)
+      registered with Acuity to receive webhook notifications.
+    variables:
+      targetUrl:
+        description: Fully qualified URL of the integrator's webhook receiver.
+        default: https://example.com/webhooks/acuity
+channels:
+  appointment.scheduled:
+    description: >-
+      Delivered when an appointment is initially booked. The notification body
+      carries `action=scheduled`.
+    subscribe:
+      summary: Receive notification that an appointment was scheduled.
+      operationId: onAppointmentScheduled
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/AppointmentScheduled'
+  appointment.rescheduled:
+    description: >-
+      Delivered when an existing appointment's time changes. The notification
+      body carries `action=rescheduled`.
+    subscribe:
+      summary: Receive notification that an appointment was rescheduled.
+      operationId: onAppointmentRescheduled
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/AppointmentRescheduled'
+  appointment.canceled:
+    description: >-
+      Delivered when an appointment is canceled. The notification body carries
+      `action=canceled`.
+    subscribe:
+      summary: Receive notification that an appointment was canceled.
+      operationId: onAppointmentCanceled
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/AppointmentCanceled'
+  appointment.changed:
+    description: >-
+      Catch-all event delivered for any appointment modification including
+      scheduling, rescheduling, cancellation, or detail updates. The
+      notification body carries `action=changed`.
+    subscribe:
+      summary: Receive notification that an appointment changed.
+      operationId: onAppointmentChanged
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/AppointmentChanged'
+  order.completed:
+    description: >-
+      Delivered when a package, gift certificate, or subscription order
+      completes. The notification body carries `action=order.completed`.
+    subscribe:
+      summary: Receive notification that an order completed.
+      operationId: onOrderCompleted
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/OrderCompleted'
+components:
+  messages:
+    AppointmentScheduled:
+      name: AppointmentScheduled
+      title: Appointment Scheduled
+      summary: An appointment was initially booked.
+      contentType: application/x-www-form-urlencoded
+      headers:
+        $ref: '#/components/schemas/WebhookHeaders'
+      payload:
+        $ref: '#/components/schemas/AppointmentEventPayload'
+      examples:
+        - name: scheduled
+          summary: Appointment scheduled notification
+          payload:
+            action: scheduled
+            id: '123456789'
+            calendarID: '1234567'
+            appointmentTypeID: '7654321'
+    AppointmentRescheduled:
+      name: AppointmentRescheduled
+      title: Appointment Rescheduled
+      summary: An appointment's time was changed.
+      contentType: application/x-www-form-urlencoded
+      headers:
+        $ref: '#/components/schemas/WebhookHeaders'
+      payload:
+        $ref: '#/components/schemas/AppointmentEventPayload'
+      examples:
+        - name: rescheduled
+          summary: Appointment rescheduled notification
+          payload:
+            action: rescheduled
+            id: '123456789'
+            calendarID: '1234567'
+            appointmentTypeID: '7654321'
+    AppointmentCanceled:
+      name: AppointmentCanceled
+      title: Appointment Canceled
+      summary: An appointment was canceled.
+      contentType: application/x-www-form-urlencoded
+      headers:
+        $ref: '#/components/schemas/WebhookHeaders'
+      payload:
+        $ref: '#/components/schemas/AppointmentEventPayload'
+      examples:
+        - name: canceled
+          summary: Appointment canceled notification
+          payload:
+            action: canceled
+            id: '123456789'
+            calendarID: '1234567'
+            appointmentTypeID: '7654321'
+    AppointmentChanged:
+      name: AppointmentChanged
+      title: Appointment Changed
+      summary: >-
+        Catch-all event for any modification to an appointment, including
+        scheduling, rescheduling, cancellation, or detail updates.
+      contentType: application/x-www-form-urlencoded
+      headers:
+        $ref: '#/components/schemas/WebhookHeaders'
+      payload:
+        $ref: '#/components/schemas/AppointmentEventPayload'
+      examples:
+        - name: changed
+          summary: Appointment changed notification
+          payload:
+            action: changed
+            id: '123456789'
+            calendarID: '1234567'
+            appointmentTypeID: '7654321'
+    OrderCompleted:
+      name: OrderCompleted
+      title: Order Completed
+      summary: A package, gift certificate, or subscription order completed.
+      contentType: application/x-www-form-urlencoded
+      headers:
+        $ref: '#/components/schemas/WebhookHeaders'
+      payload:
+        $ref: '#/components/schemas/OrderEventPayload'
+      examples:
+        - name: order_completed
+          summary: Order completed notification
+          payload:
+            action: order.completed
+            id: '987654321'
+  schemas:
+    WebhookHeaders:
+      type: object
+      description: >-
+        HTTP headers Acuity attaches to every webhook notification.
+      properties:
+        Content-Type:
+          type: string
+          description: Always `application/x-www-form-urlencoded` for Acuity webhooks.
+          const: application/x-www-form-urlencoded
+        x-acuity-signature:
+          type: string
+          description: >-
+            Base64-encoded HMAC-SHA256 signature of the raw request body
+            computed with the account's API key. Verify by computing a matching
+            HMAC-SHA256 digest of the received body and comparing to this
+            header value.
+      required:
+        - Content-Type
+        - x-acuity-signature
+    AppointmentEventPayload:
+      type: object
+      description: >-
+        Form-encoded body delivered for appointment events (`scheduled`,
+        `rescheduled`, `canceled`, `changed`).
+      properties:
+        action:
+          type: string
+          description: The event type that triggered the notification.
+          enum:
+            - scheduled
+            - rescheduled
+            - canceled
+            - changed
+        id:
+          type: string
+          description: Identifier of the affected appointment.
+        calendarID:
+          type: string
+          description: Identifier of the calendar the appointment belongs to.
+        appointmentTypeID:
+          type: string
+          description: Identifier of the appointment type.
+      required:
+        - action
+        - id
+        - calendarID
+        - appointmentTypeID
+    OrderEventPayload:
+      type: object
+      description: >-
+        Form-encoded body delivered for order events. Currently only
+        `order.completed` is documented, triggered by package, gift certificate,
+        and subscription orders.
+      properties:
+        action:
+          type: string
+          description: The event type that triggered the notification.
+          enum:
+            - order.completed
+        id:
+          type: string
+          description: Identifier of the completed order.
+      required:
+        - action
+        - id
