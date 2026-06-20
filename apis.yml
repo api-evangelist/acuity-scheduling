@@ -9,7 +9,7 @@ description: >-
   acuityscheduling.com/api/v1. Authentication uses HTTP Basic Auth (User ID +
   API Key) for single accounts or OAuth 2.0 for multi-tenant applications.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Appointment Scheduling
   - Booking
