@@ -39,7 +39,7 @@ apis:
     properties:
       - type: Documentation
         url: https://developers.acuityscheduling.com/reference
-      - type: Quick Start
+      - type: GettingStarted
         url: https://developers.acuityscheduling.com/reference/quick-start
       - type: OAuth 2.0
         url: https://developers.acuityscheduling.com/docs/oauth2
@@ -77,9 +77,9 @@ common:
     url: https://developers.acuityscheduling.com
   - type: Pricing
     url: https://acuityscheduling.com/signup.php
-  - type: SignUp
+  - type: Signup
     url: https://acuityscheduling.com/signup.php
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://developers.acuityscheduling.com/llms.txt
 maintainers:
   - FN: Kin Lane
