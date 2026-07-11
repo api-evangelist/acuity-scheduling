@@ -69,6 +69,10 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/acuity-scheduling/refs/heads/main/openapi/acuity-scheduling-asyncapi.yml
 common:
+  - type: DomainSecurity
+    url: security/acuity-scheduling-domain-security.yml
+  - type: Authentication
+    url: authentication/acuity-scheduling-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/acuity-scheduling
   - type: Website
@@ -81,6 +85,8 @@ common:
     url: https://acuityscheduling.com/signup.php
   - type: LlmsText
     url: https://developers.acuityscheduling.com/llms.txt
+  - type: Blog
+    url: https://www.acuityscheduling.com/learn
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
