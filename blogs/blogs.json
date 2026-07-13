@@ -1,0 +1,21 @@
+{
+  "repo": "acuity-scheduling",
+  "feeds": [
+    {
+      "source": "https://www.acuityscheduling.com/learn",
+      "feed_url": "https://www.acuityscheduling.com/learn",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://developers.acuityscheduling.com/llms.txt",
+      "feed_url": "https://developers.acuityscheduling.com/llms.txt",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 5
+}
