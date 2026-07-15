@@ -69,6 +69,8 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/acuity-scheduling/refs/heads/main/openapi/acuity-scheduling-asyncapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/acuity-scheduling-agentic-access.yml
   - type: DomainSecurity
     url: security/acuity-scheduling-domain-security.yml
   - type: Authentication
