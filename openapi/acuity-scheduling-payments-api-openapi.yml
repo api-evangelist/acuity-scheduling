@@ -1,0 +1,27 @@
+openapi: 3.1.0
+info:
+  title: Acuity Scheduling Appointments Payments API
+  version: v1
+  description: Acuity Scheduling's API for managing appointments, payments, and service metadata. Documented endpoints cover listing/creating/updating appointments, retrieving payments for an appointment, and exposing service metadata.
+  contact:
+    name: Acuity Scheduling Developers
+    url: https://developers.acuityscheduling.com
+servers:
+- url: https://acuityscheduling.com/api/v1
+  description: Acuity Scheduling API
+security:
+- BasicAuth: []
+tags:
+- name: Payments
+paths:
+  /appointments/{id}/payments:
+    get:
+      summary: Retrieve a list of payment transactions for a particular appointment
+      tags:
+      - Payments
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic auth using your User ID as username and API Key as password
