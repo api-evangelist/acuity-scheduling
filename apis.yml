@@ -9,7 +9,19 @@ description: >-
   acuityscheduling.com/api/v1. Authentication uses HTTP Basic Auth (User ID +
   API Key) for single accounts or OAuth 2.0 for multi-tenant applications.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/acuity-scheduling.png
 tags:
   - Appointment Scheduling
   - Booking
@@ -22,52 +34,79 @@ created: '2026-05-11'
 modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
-  - aid: acuity-scheduling:rest-api-v1
-    name: Acuity Scheduling REST API v1
-    description: >-
-      REST API for managing appointments, appointment types, clients,
-      calendars, availability, intake forms, products, and webhooks in Acuity
-      Scheduling. Supports HTTP Basic Auth (User ID + API Key) for single
-      accounts and OAuth 2.0 for multi-user integrations.
-    humanURL: https://developers.acuityscheduling.com/reference
-    baseURL: https://acuityscheduling.com/api/v1
-    tags:
-      - Appointment Scheduling
-      - Booking
-      - Calendar
-      - REST API
-    properties:
-      - type: Documentation
-        url: https://developers.acuityscheduling.com/reference
-      - type: GettingStarted
-        url: https://developers.acuityscheduling.com/reference/quick-start
-      - type: OAuth 2.0
-        url: https://developers.acuityscheduling.com/docs/oauth2
-      - type: GitHub SDK
-        url: https://github.com/AcuityScheduling/acuity-js
-  - aid: acuity-scheduling:webhooks-asyncapi
-    name: Acuity Scheduling Webhooks
-    description: >-
-      AsyncAPI 2.6 definition for Acuity Scheduling's outbound webhook surface.
-      Models the documented appointment events (scheduled, rescheduled,
-      canceled, changed) and order events (order.completed) delivered as
-      application/x-www-form-urlencoded POST requests signed with an
-      x-acuity-signature HMAC-SHA256 header.
-    humanURL: https://developers.acuityscheduling.com/reference/webhooks
-    tags:
-      - Webhooks
-      - Events
-      - AsyncAPI
-      - Appointments
-      - Orders
-    properties:
-      - type: Documentation
-        url: https://developers.acuityscheduling.com/reference/webhooks
-      - type: Documentation
-        url: https://developers.acuityscheduling.com/docs/webhooks.md
-      - type: AsyncAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/acuity-scheduling/refs/heads/main/openapi/acuity-scheduling-asyncapi.yml
+- aid: acuity-scheduling:rest-api-v1
+  name: Acuity Scheduling REST API v1
+  description: >-
+    REST API for managing appointments, appointment types, clients, calendars, availability, intake forms,
+    products, and webhooks in Acuity Scheduling. Supports HTTP Basic Auth (User ID + API Key) for single
+    accounts and OAuth 2.0 for multi-user integrations.
+  humanURL: https://developers.acuityscheduling.com/reference
+  baseURL: https://acuityscheduling.com/api/v1
+  tags:
+  - Appointment Scheduling
+  - Booking
+  - Calendar
+  - REST API
+  properties:
+  - type: Documentation
+    url: https://developers.acuityscheduling.com/reference
+  - type: GettingStarted
+    url: https://developers.acuityscheduling.com/reference/quick-start
+  - type: OAuth 2.0
+    url: https://developers.acuityscheduling.com/docs/oauth2
+  - type: GitHub SDK
+    url: https://github.com/AcuityScheduling/acuity-js
+- aid: acuity-scheduling:webhooks-asyncapi
+  name: Acuity Scheduling Webhooks
+  description: >-
+    AsyncAPI 2.6 definition for Acuity Scheduling's outbound webhook surface. Models the documented appointment
+    events (scheduled, rescheduled, canceled, changed) and order events (order.completed) delivered as
+    application/x-www-form-urlencoded POST requests signed with an x-acuity-signature HMAC-SHA256 header.
+  humanURL: https://developers.acuityscheduling.com/reference/webhooks
+  tags:
+  - Webhooks
+  - Events
+  - AsyncAPI
+  - Appointments
+  - Orders
+  properties:
+  - type: Documentation
+    url: https://developers.acuityscheduling.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.acuityscheduling.com/docs/webhooks.md
+  - type: AsyncAPI
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/acuity-scheduling/refs/heads/main/openapi/acuity-scheduling-asyncapi.yml
+- aid: acuity-scheduling:acuity-scheduling-appointments-api
+  name: Acuity Scheduling Appointments API
+  description: The Appointments API from Acuity Scheduling — 2 operation(s) for appointments.
+  humanURL: https://developers.acuityscheduling.com/reference
+  baseURL: https://acuityscheduling.com/api/v1
+  tags:
+  - Appointments
+  properties:
+  - type: OpenAPI
+    url: openapi/acuity-scheduling-appointments-api-openapi.yml
+- aid: acuity-scheduling:acuity-scheduling-meta-api
+  name: Acuity Scheduling Meta API
+  description: The Meta API from Acuity Scheduling — 1 operation(s) for meta.
+  humanURL: https://developers.acuityscheduling.com/reference
+  baseURL: https://acuityscheduling.com/api/v1
+  tags:
+  - Meta
+  properties:
+  - type: OpenAPI
+    url: openapi/acuity-scheduling-meta-api-openapi.yml
+- aid: acuity-scheduling:acuity-scheduling-payments-api
+  name: Acuity Scheduling Payments API
+  description: The Payments API from Acuity Scheduling — 1 operation(s) for payments.
+  humanURL: https://developers.acuityscheduling.com/reference
+  baseURL: https://acuityscheduling.com/api/v1
+  tags:
+  - Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/acuity-scheduling-payments-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/acuity-scheduling-agentic-access.yml
