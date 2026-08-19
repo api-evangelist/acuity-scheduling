@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Acuity Scheduling Appointments Payments API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Payments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve a list of payment transactions for a particular appointment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://acuityscheduling.com/api/v1/appointments/:id/payments"
+          },
+          "docs": "Retrieve a list of payment transactions for a particular appointment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

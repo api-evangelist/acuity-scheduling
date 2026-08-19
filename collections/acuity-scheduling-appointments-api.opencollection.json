@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Acuity Scheduling Appointments API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Appointments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a list of appointments currently scheduled for the authenticated user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://acuityscheduling.com/api/v1/appointments"
+          },
+          "docs": "Get a list of appointments currently scheduled for the authenticated user"
+        },
+        {
+          "info": {
+            "name": "Create an appointment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://acuityscheduling.com/api/v1/appointments"
+          },
+          "docs": "Create an appointment"
+        },
+        {
+          "info": {
+            "name": "Update appointment details from a whitelist of updatable attributes",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://acuityscheduling.com/api/v1/appointments/:id"
+          },
+          "docs": "Update appointment details from a whitelist of updatable attributes"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

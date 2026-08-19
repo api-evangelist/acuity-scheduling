@@ -1,0 +1,121 @@
+{
+  "item": [
+    {
+      "id": "a5eb2d77-2799-4d6a-ab6a-bae0b84468ff",
+      "name": "Appointments",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9c2eb947-cee8-4421-a467-1905fb524436",
+          "name": "Get a list of appointments currently scheduled for the authenticated user",
+          "request": {
+            "name": "Get a list of appointments currently scheduled for the authenticated user",
+            "description": {},
+            "url": {
+              "path": [
+                "appointments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b081fde2-953d-49e2-91fe-df31e0e696b7",
+          "name": "Create an appointment",
+          "request": {
+            "name": "Create an appointment",
+            "description": {},
+            "url": {
+              "path": [
+                "appointments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d48f2728-bff3-4deb-8b56-7a8455ce7a8c",
+          "name": "Update appointment details from a whitelist of updatable attributes",
+          "request": {
+            "name": "Update appointment details from a whitelist of updatable attributes",
+            "description": {},
+            "url": {
+              "path": [
+                "appointments",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://acuityscheduling.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "313f6c30-d2fc-41ff-89fb-312714f7476b",
+    "name": "Acuity Scheduling Appointments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Acuity Scheduling's API for managing appointments, payments, and service metadata. Documented endpoints cover listing/creating/updating appointments, retrieving payments for an appointment, and exposing service metadata.\n\nContact Support:\n Name: Acuity Scheduling Developers",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+# Acuity Scheduling Documentation
+
+> For developers worldwide: customize your online appointment scheduler using our powerful scheduling API & CSS support.
+
+## Guides
+- [Getting Started](https://developers.acuityscheduling.com/docs/getting-started.md): Learn how to customize online appointment scheduling with Acuity Scheduling using our powerful scheduling API & CSS support.
+- [Embeds and Dynamic Links](https://developers.acuityscheduling.com/docs/embedding.md)
+- [CSS Customization](https://developers.acuityscheduling.com/docs/custom-css.md)
+- [Webhooks](https://developers.acuityscheduling.com/docs/webhooks.md)
+
+## API Reference
+- [Quick Start](https://developers.acuityscheduling.com/reference/quick-start.md)
+- [/appointments](https://developers.acuityscheduling.com/reference/get-appointments.md): Get a list of appointments currently scheduled for the authenticated user.
+- [/appointments](https://developers.acuityscheduling.com/reference/post-appointments.md): Create an appointment.
+- [/appointments/:id](https://developers.acuityscheduling.com/reference/put-appointments-id.md): Update an appointment details from a white-list of updatable attributes.
+- [/appointments/:id/payments](https://developers.acuityscheduling.com/reference/get-appointments-id-payments.md): Retrieve a list of payment transactions for a particular appointment.
+- [/meta](https://developers.acuityscheduling.com/reference/meta.md): Metadata for Acuity services.
+
+## Pages
+- [How To Schedule an Appointment with the Acuity Scheduling API](https://developers.acuityscheduling.com/page/how-to-schedule-an-appointment-with-the-acuity-scheduling-api.md)
+- [Set Timezones When Importing Appointments](https://developers.acuityscheduling.com/page/set-timezones-when-importing-appointments.md)
+- [Support](https://developers.acuityscheduling.com/page/support.md)
+- [Dynamic Webhooks](https://developers.acuityscheduling.com/page/webhooks-webhooks-webhooks.md)

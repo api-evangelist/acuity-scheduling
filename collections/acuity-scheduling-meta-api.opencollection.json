@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Acuity Scheduling Appointments Meta API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Meta",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get metadata for Acuity services",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://acuityscheduling.com/api/v1/meta"
+          },
+          "docs": "Get metadata for Acuity services"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
