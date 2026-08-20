@@ -64,6 +64,12 @@ apis:
     application/x-www-form-urlencoded POST requests signed with an x-acuity-signature HMAC-SHA256 header.
   humanURL: https://developers.acuityscheduling.com/reference/webhooks
   tags:
+  - Webhook
+  - Event
+  - AsyncAPI
+  - Appointments
+  - Order
+  tags_raw:
   - Webhooks
   - Events
   - AsyncAPI
