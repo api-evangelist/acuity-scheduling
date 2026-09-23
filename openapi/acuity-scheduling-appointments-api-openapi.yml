@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Acuity Scheduling Appointments API
   version: v1
@@ -19,15 +19,21 @@ paths:
       summary: Get a list of appointments currently scheduled for the authenticated user
       tags:
       - Appointments
+      operationId: getAppointments
+      x-operation-id-source: derived
     post:
       summary: Create an appointment
       tags:
       - Appointments
+      operationId: postAppointments
+      x-operation-id-source: derived
   /appointments/{id}:
     put:
       summary: Update appointment details from a whitelist of updatable attributes
       tags:
       - Appointments
+      operationId: putAppointmentsById
+      x-operation-id-source: derived
 components:
   securitySchemes:
     BasicAuth:

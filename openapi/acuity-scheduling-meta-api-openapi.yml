@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Acuity Scheduling Appointments Meta API
+  title: Acuity Scheduling Meta API
   version: v1
   description: Acuity Scheduling's API for managing appointments, payments, and service metadata. Documented endpoints cover listing/creating/updating appointments, retrieving payments for an appointment, and exposing service metadata.
   contact:
@@ -19,6 +19,8 @@ paths:
       summary: Get metadata for Acuity services
       tags:
       - Meta
+      operationId: getMeta
+      x-operation-id-source: derived
 components:
   securitySchemes:
     BasicAuth:
