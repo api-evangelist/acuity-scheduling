@@ -16,6 +16,9 @@ checked:
 - https://zapier.com/apps/acuity-scheduling/integrations
 - square/integrations/square-integration-edges.yml
 - zoom/integrations/zoom-integration-edges.yml
+- https://ifttt.com/acuity_scheduling
+- https://ifttt.com/explore/services
+- https://ifttt.com/sitemap_services.xml
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -552,6 +555,31 @@ edges:
     builder: Pipedream repo (component)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
+- partner_name: IFTTT
+  partner: ifttt
+  partner_match: aggregator
+  type: marketplace
+  marketplace: ifttt-services
+  channel: ipaas-listing
+  relationship: ipaas-bridge
+  direction: third-party
+  evidence: https://ifttt.com/acuity_scheduling
+  category: null
+  contract_reference:
+    register: IFTTT service directory (ifttt.com/explore/services; ifttt.com/<service>)
+    spec_file: null
+    role: ipaas-connector:ifttt
+    registered_name: Acuity Scheduling
+    matched_domain: acuityscheduling.com
+    matched_by: domain
+    app_slug: acuity_scheduling
+    ifttt_category: Business tools
+    builder: unknown (the service page does not say who built it)
+    detected_by: sweep-ifttt-services.py
+    detected: '2026-10-23'
+    signal_note: one edge per (provider, platform); triggers, actions and applet counts are context, never read
+  detected_by: sweep-ifttt-services.py
+  first_seen: '2026-10-23'
 templates:
 - title: Add new Acuity Scheduling appointments to a Google Sheets spreadsheet
   url: https://zapier.com/apps/acuity-scheduling/integrations/google-sheets/3968/add-new-acuity-scheduling-appointments-to-a-google-sheets-spreadsheet
