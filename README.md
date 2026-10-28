@@ -1,4 +1,4 @@
-# Acuity Scheduling (acuity-scheduling)
+# Acuity Scheduling
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,82 +66,105 @@
 
 Acuity Scheduling is an online appointment scheduling platform (a Squarespace product) used by service businesses, coaches, and practitioners to manage client bookings, calendars, intake forms, payments, and reminders. The Acuity REST API provides programmatic access to appointments, appointment types, clients, calendars, availability, forms, and webhooks at acuityscheduling.com/api/v1. Authentication uses HTTP Basic Auth (User ID + API Key) for single accounts or OAuth 2.0 for multi-tenant applications.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/acuity-scheduling/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/acuity-scheduling/refs/heads/main/apis.yml)
+**Areas:** Appointment Scheduling · Booking · Calendar · Scheduling · Squarespace
 
-## Scope
+## Acuity Scheduling on APIs.io
 
-- **Type:** Index
+Everything profiled for Acuity Scheduling is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/acuity-scheduling/](https://apis.io/providers/acuity-scheduling/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- Appointment Scheduling
-- Booking
-- Calendar
-- Scheduling
-- Squarespace
+- [Acuity Scheduling REST API v1](https://apis.io/apis/acuity-scheduling/rest-api-v1/) — REST API for managing appointments, appointment types, clients, calendars, availability, intake forms, products, and webhooks in Acuity Scheduling. Supports…
+- [Acuity Scheduling Webhooks](https://apis.io/apis/acuity-scheduling/webhooks-asyncapi/) — AsyncAPI 2.6 definition for Acuity Scheduling's outbound webhook surface. Models the documented appointment events (scheduled, rescheduled, canceled,…
+- [Acuity Scheduling Appointments API](https://apis.io/apis/acuity-scheduling/acuity-scheduling-appointments-api/) — The Appointments API from Acuity Scheduling — 2 operation(s) for appointments.
+- [Acuity Scheduling Meta API](https://apis.io/apis/acuity-scheduling/acuity-scheduling-meta-api/) — The Meta API from Acuity Scheduling — 1 operation(s) for meta.
+- [Acuity Scheduling Payments API](https://apis.io/apis/acuity-scheduling/acuity-scheduling-payments-api/) — The Payments API from Acuity Scheduling — 1 operation(s) for payments.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-30
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Acuity Scheduling REST API v1
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for managing appointments, appointment types, clients, calendars, availability, intake forms, products, and webhooks in Acuity Scheduling. Supports HTTP Basic Auth (User ID + API Key) for single accounts and OAuth 2.0 for multi-user integrations.
+- [Acuity Scheduling Agentic Access](https://apis.io/agentic-access/acuity-scheduling/acuity-scheduling-agentic-access/)
 
-- **Human URL:** [https://developers.acuityscheduling.com/reference](https://developers.acuityscheduling.com/reference)
-- **Base URL:** `https://acuityscheduling.com/api/v1`
+#### Collections (5)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Appointment Scheduling
-- Booking
-- Calendar
-- REST API
+- [Acuity Scheduling API](https://apis.io/collections/acuity-scheduling/open-acuity-scheduling/)
+- [Acuity Scheduling Appointments API](https://apis.io/collections/acuity-scheduling/open-acuity-scheduling-appointments-api/)
+- [Acuity Scheduling Webhooks](https://apis.io/collections/acuity-scheduling/open-acuity-scheduling-asyncapi/)
+- [Acuity Scheduling Appointments Meta API](https://apis.io/collections/acuity-scheduling/open-acuity-scheduling-meta-api/)
+- [Acuity Scheduling Appointments Payments API](https://apis.io/collections/acuity-scheduling/open-acuity-scheduling-payments-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://developers.acuityscheduling.com/reference)
-- [Quick  Start](https://developers.acuityscheduling.com/reference/quick-start)
-- [O Auth 2.0](https://developers.acuityscheduling.com/docs/oauth2)
-- [Git Hub  S D K](https://github.com/AcuityScheduling/acuity-js)
-- [Postman Collection](collections/acuity-scheduling.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/acuity-scheduling.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Acuity Scheduling Webhooks
+- [Acuity Scheduling Authentication](https://apis.io/security/acuity-scheduling/acuity-scheduling-authentication/)
+- [Acuity Scheduling Domain Security](https://apis.io/security/acuity-scheduling/acuity-scheduling-domain-security/)
 
-AsyncAPI 2.6 definition for Acuity Scheduling's outbound webhook surface. Models the documented appointment events (scheduled, rescheduled, canceled, changed) and order events (order.completed) delivered as application/x-www-form-urlencoded POST requests signed with an x-acuity-signature HMAC-SHA256 header.
+## Where to find this API
 
-- **Human URL:** [https://developers.acuityscheduling.com/reference/webhooks](https://developers.acuityscheduling.com/reference/webhooks)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Tags
-
-- Webhooks
-- Events
-- AsyncAPI
-- Appointments
-- Orders
-
-#### Properties
-
-- [Documentation](https://developers.acuityscheduling.com/reference/webhooks)
-- [Documentation](https://developers.acuityscheduling.com/docs/webhooks.md)
-- [AsyncAPI](https://raw.githubusercontent.com/api-evangelist/acuity-scheduling/refs/heads/main/openapi/acuity-scheduling-asyncapi.yml) — [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)
-- [Postman Collection](collections/acuity-scheduling.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/acuity-scheduling.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/acuity-scheduling)
 - [Website](https://acuityscheduling.com)
 - [Documentation](https://developers.acuityscheduling.com)
 - [Pricing](https://acuityscheduling.com/signup.php)
-- [Sign Up](https://acuityscheduling.com/signup.php)
-- [L L Ms Txt](https://developers.acuityscheduling.com/llms.txt)
+- [Blog](https://www.acuityscheduling.com/learn)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 28.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 50.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 29.8 |
+| Access clarity | 23.7 |
+
+**Agent readiness 22.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | unknown |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/acuity-scheduling/](https://apis.io/providers/acuity-scheduling/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Acuity Scheduling: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/acuity-scheduling/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
